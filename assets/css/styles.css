@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap');
+
+:root {
+  --primary: #DC2F3A;
+  --secondary: #766862;
+  --dark-grey: #3E474D;
+}
+
+* {
+  font-family: 'Montserrat', sans-serif !important;
+  box-sizing: border-box;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+p {
+  line-height: 1.5rem;
+}
+
+body {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  display: flex;
+}
+
+.container {
+  width: 480px;
+  min-height: 100vh;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    border-color: var(--dark-grey);
+    border-width: 0 3px 0 3px;
+    border-style: solid;
+  }
+}
+
+#audio_controls {
+  display: none;
+}
+
+#gif_hello,
+#gif_song {
+  height: 462px;
+}
+
+.hide {
+  display: none !important;
+}
+
+.mr-2 {
+  margin-right: 0.2rem;
+}
+.margin-top {
+  margin-top: 1rem;
+}
+
+.title {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.section {
+  padding: 16px;
+  position: relative;
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 4px;
+  padding: 10px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+.button.disabled {
+  cursor: not-allowed;
+  opacity: .75;
+}
+.button-block {
+  width: 100%;
+  padding: 16px 0;
+}
+.button-primary {
+  border: 1px solid var(--primary);
+  background-color: var(--primary);
+  color: #fff;
+}
+.button-primary.outlined {
+  background-color: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.button.to-right {
+  transform: translate(100px, 50px);
+}
+.button.to-bottom {
+  transform: translate(50px, 100px);
+}
+
+.font-lg {
+  font-size: 1.5rem;
+}
+
+.words-container {
+  border: 3px solid var(--dark-grey);
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  margin: 16px 0;
+  height: 100px;
+}
+.words {
+  position: absolute;
+  padding-top: 32px;
+  width: 100%;
+  top: 0;
+  
+  /* animation properties */
+  /* -moz-animation: my-animation 20s linear infinite;
+  -webkit-animation: my-animation 20s linear infinite;
+  animation: my-animation 20s linear infinite; */
+}
+.word {
+  color: var(--dark-grey);
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  height: 100px;
+}
+
+@keyframes my-animation {
+  from {
+    top: 0;
+  }
+  to {
+    top: -616px;
+  }
+}
+
+.section.back {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.modal {
+  background: rgba(0, 0, 0, .75);
+  padding: 16px;
+  position: absolute;
+  height: 100vh;
+  width: 480px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal .section {
+  background-color: #fff;
+  padding-bottom: 32px;
+  width: 100%;
+}
